@@ -1,0 +1,32 @@
+{
+  "name": "ToDo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "connect-flash": "0.1.1",
+    "express": "4.16.2",
+    "express-handlebars": "3.0.0",
+    "mongodb": "3.0.0-rc0",
+    "mongoose": "4.13.6"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.13.0",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.0",
+    "gulp-util": "3.0.8",
+    "webpack": "3.10.0"
+  }
+}
