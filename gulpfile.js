@@ -8,16 +8,16 @@ gulp.task('default', ['build-client', 'build-server']);
 
 gulp.task('build-client', ['copy-assets'], () => {
   // Compile client
-  // webpack(config, (err) => {
-  //   if (err) throw new gutil.PluginError('webpack', err);
-  // });
+  webpack(config, (err) => {
+    if (err) throw new gutil.PluginError('webpack', err);
+  });
 });
 
 gulp.task('build-server', ['copy-views'], () => {
   // Compile server
   gulp.src([
-    '!src/assets/**/*.*',
-    '!src/views/**/*.*',
+    '!src/app/assets/**/*.*',
+    '!src/app/views/**/*.*',
     'src/**/*.js',
     'config/**/*.*',
   ])

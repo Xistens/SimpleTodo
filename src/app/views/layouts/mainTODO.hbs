@@ -55,11 +55,13 @@
           </div>
         {{/if}}
           <h2>ToDo List</h2>
-          <input type="text" class="form-control" id="todoText" name="todo" placeholder="What do you need to do?">
-
+          <form action="/addTask" method="POST">
+            <input type="text" class="form-control" id="todoText" name="todo" placeholder="What do you need to do?">
+          </form>
         {{{body}}}
         </div>
       </div>
     </main>
+    <script src="js/bundle.js"></script>
   </body>
 </html>

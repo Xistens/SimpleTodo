@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   name: 'client',
-  entry: './src/assets/js/client.js',
+  entry: './src/app/assets/js/client.js',
   module: {
     loaders: [{
       test: /\.js$/,
@@ -18,6 +18,6 @@ module.exports = {
   // externals: [nodeExternals()],
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist/assets/js'),
+    path: path.join(__dirname, 'dist/app/assets/js'),
   },
 };
