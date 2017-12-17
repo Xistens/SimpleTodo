@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   name: 'client',
-  entry: './src/app/assets/js/client.js',
+  entry: ['./src/app/assets/js/client.js', './src/app/assets/js/edit.js'],
   module: {
     loaders: [{
       test: /\.js$/,

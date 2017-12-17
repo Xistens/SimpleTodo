@@ -55,7 +55,7 @@
           </div>
         {{/if}}
           <h2>ToDo List</h2>
-          <form action="/addTask" method="POST">
+          <form action="/addTask" method="POST" onsubmit="return addTask()">
             <input type="text" class="form-control" id="todoText" name="todo" placeholder="What do you need to do?">
           </form>
         {{{body}}}

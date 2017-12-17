@@ -1,25 +1,23 @@
-import { isArray } from "util";
-
 const todoText = document.getElementById('todoText');
 const todoList = document.querySelector('.todo-list');
 
 function addElements(data) {
-  return data.map((task) => {
+  for (let i = 0, j = data.length; i < j; i++) {
     todoList.insertAdjacentHTML('beforeend', `
       <li class="list-group-item">
         <div class="text-holder">
-          ${task.content}
+          ${data[i].content}
           <div class="btn-group float-right">
-            <button class="delete btn btn-warning">Delete</button>
+            <button id="${i}" class="delete btn btn-warning">Delete</button>
             <button class="edit btn btn-success">Edit</button>
           </div>
         </div>
       </li>
     `);
-  });
+  }
 }
 
-function getJSON(callback) {
+function getTasks(callback) {
   fetch('/readTasks', {
     method: 'GET',
   }).then((res) => {
@@ -50,4 +48,4 @@ todoText.addEventListener('keypress', (evnt) => {
   }
 });
 
-getJSON(addElements);
+getTasks(addElements);
